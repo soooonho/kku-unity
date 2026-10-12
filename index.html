@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101923" />
+    <title>Industrial Props Lab</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">▦</span><span>INDUSTRIAL <strong>PROPS LAB</strong></span></div>
+        <span class="topbar-note">PROCEDURAL ASSET SHOWCASE <span class="topbar-line"></span> THREE.JS</span>
+      </header>
+      <main class="layout">
+        <aside class="sidebar">
+          <div class="sidebar-heading"><span class="eyebrow">ASSET LIBRARY / 01</span><h1>산업용 3D<br /><em>오브젝트</em></h1><p>실제 크기를 기준으로 만든 재사용 가능한 산업 소품을 살펴보세요.</p></div>
+          <div class="section-label">OBJECTS <span id="asset-count">16</span></div>
+          <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="asset-search" type="search" placeholder="소품 검색" aria-label="소품 검색" autocomplete="off" /></label>
+          <div id="asset-list" class="asset-list"></div>
+          <div class="sidebar-bottom"><span class="status-dot"></span> 1 UNIT = 1 METER <span class="sidebar-bottom-right">WEBGL READY</span></div>
+        </aside>
+        <section class="viewer" aria-label="3D 뷰어">
+          <div id="canvas-root" class="canvas-root"></div>
+          <div class="viewer-top"><span class="view-badge"><span class="status-dot"></span> LIVE VIEWPORT</span><span class="viewer-hint">드래그 회전 · 휠 확대 · 우클릭 이동</span></div>
+          <div class="viewer-bottom"><div class="axis-key"><span class="axis-x">X</span><span class="axis-y">Y</span><span class="axis-z">Z</span></div><span id="view-label">PERSPECTIVE VIEW</span></div>
+        </section>
+        <aside class="details">
+          <div class="details-head"><span class="eyebrow">OBJECT INSPECTOR</span><span class="head-index" id="asset-index">01 / 16</span></div>
+          <div class="detail-icon" id="detail-icon">▤</div>
+          <div class="detail-category" id="detail-category">WORKSTATION</div>
+          <h2 id="detail-title">산업용 작업대</h2>
+          <p id="detail-description"></p>
+          <div class="rule"></div>
+          <div class="section-label">DIMENSIONS <span>METERS</span></div>
+          <div class="dimensions"><div><span>WIDTH</span><strong id="dim-width">2.00</strong><small>m</small></div><div><span>HEIGHT</span><strong id="dim-height">0.90</strong><small>m</small></div><div><span>DEPTH</span><strong id="dim-depth">0.80</strong><small>m</small></div></div>
+          <div class="rule"></div>
+          <div class="section-label">MATERIALS</div>
+          <div id="material-tags" class="material-tags"></div>
+          <div class="details-spacer"></div>
+          <button id="export-button" class="export-button" type="button">선택한 모델 GLB 다운로드 <span>↗</span></button>
+          <div class="detail-foot">PROCEDURAL MODEL <span>·</span> BOTTOM-CENTER ORIGIN</div>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
